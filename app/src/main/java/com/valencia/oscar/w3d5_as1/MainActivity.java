@@ -5,7 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+
 
 public class MainActivity extends AppCompatActivity {
     ImageView imageView;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public void loadImage(View view) {
         String imageUri =
                 "https://banner2.kisspng.com/20180408/ihw/kisspng-crocodile-sarcosuchus-kaprosuchus-alligator-campto-boar-5acac013912b99.2208714615232368835946.jpg";
-        Picasso.with(this).load(imageUri).into(imageView);
+        Glide.with(this).load(imageUri).into(imageView);
+//        GlideApp.with(this).load("http://goo.gl/gEgYUd").into(imageView);
     }
 }
